@@ -11,7 +11,10 @@ export default {
   currentIndex: 0,
   clickIndex: 0,
   goods: null,
+  seller: null,
+  ratings: null,
   showShopcartDetail: false,
   totalPrice: 0,
-  elementClicked:[]
+  elementClicked:[],
+  foodClickedIndex:{}
 }

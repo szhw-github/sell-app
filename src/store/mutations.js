@@ -29,6 +29,12 @@ export default {
   getGoods (state, goods) {
     state.goods = goods
   },
+  getSeller (state, seller) {
+    state.seller = seller
+  },
+  getRatings (state, ratings) {
+    state.ratings = ratings
+  },
   setShowShopcartDetail (state,action) {
     if (action === 'click') {
       state.showShopcartDetail = !state.showShopcartDetail;
@@ -36,8 +42,16 @@ export default {
     if (action === 'touch') {
       state.showShopcartDetail = false
     }
+    if (action === 'clear') {
+      state.showShopcartDetail = false
+    }
   },
   getElementClicked (state,element) {
     state.elementClicked.push(element)
+  },
+  getFoodClickedIndex (state, index) {
+    state.foodClickedIndex.i = index.i
+    state.foodClickedIndex.j = index.j
+    console.log(state.foodClickedIndex)
   }
 }
